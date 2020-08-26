@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as uAdmin
-from django.contrib.auth.models import User
 from dateutil.relativedelta import relativedelta
 from .models import User as myUser
 from django.contrib import messages 
