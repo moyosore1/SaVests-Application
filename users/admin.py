@@ -23,9 +23,7 @@ class DateJoinedFilter(admin.SimpleListFilter):
 		time_24_hours_ago = datetime.datetime.today() - datetime.timedelta(hours=24)
 		time_one_week_ago = datetime.datetime.today() - datetime.timedelta(days=7)
 		time_one_month_ago = datetime.datetime.today() - relativedelta(months=1)
-		print(time_24_hours_ago)
-		print(time_one_week_ago)
-		print(time_one_month_ago)
+		
 
 		if self.value() == '24hours':
 			return queryset.filter(date_joined__lt=datetime.datetime.today(), date_joined__gt=time_24_hours_ago)
